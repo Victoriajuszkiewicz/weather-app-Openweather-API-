@@ -18,9 +18,9 @@ function App() {
 
   const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${REACT_APP_API_KEY}&units=metric`;
 
-  async function pause(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
+  // async function pause(ms) {
+  //   return new Promise((resolve) => setTimeout(resolve, ms));
+  // }
 
   const handleChange = (e) => {
     // handle key presses
@@ -38,11 +38,11 @@ function App() {
   //function "handleSubmit" will call "getWeather" and take care of other tasks relating to state and the form.
   const getWeather = async (formLocation) => {
     //console.log(formLocation);
-    setLoading(true);
+    // setLoading(true);
     setWeather(null);
     setError("");
 
-    await pause(500);
+    // await pause(500);
     // call Open Weather API
     try {
       //this line connects to one with url
@@ -65,10 +65,8 @@ function App() {
       // Network error: server wasn't reached
       setError(`Network error: ${err.message}`);
     }
-    setLoading(false);
+    // setLoading(false);
   };
-
-  console.log(weather);
 
   return (
     <div className="App">
