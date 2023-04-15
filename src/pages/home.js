@@ -9,8 +9,6 @@ const Home = (props) => {
 	const [Boston, setBoston] = useState({});
 	const [Barcelona, setBarcelona] = useState({});
 
-	const REACT_APP_API_KEY = "b3e43794b735ae0eeda537605a79cc74";
-
 	useEffect(() => {
 		fetchBerlin();
 		fetchDublin();
@@ -21,7 +19,7 @@ const Home = (props) => {
 	const fetchBerlin = async () => {
 		try {
 			const { data } = await axios.get(
-				`https://api.openweathermap.org/data/2.5/weather?q=Berlin&appid=${REACT_APP_API_KEY}&units=metric`
+				`https://api.openweathermap.org/data/2.5/weather?q=Berlin&appid=${process.env.REACT_APP_API_KEY}&units=metric`
 			);
 
 			setBerlin(data);
@@ -33,7 +31,7 @@ const Home = (props) => {
 	const fetchDublin = async () => {
 		try {
 			const { data } = await axios.get(
-				`https://api.openweathermap.org/data/2.5/weather?q=Dublin&appid=${REACT_APP_API_KEY}&units=metric`
+				`https://api.openweathermap.org/data/2.5/weather?q=Dublin&appid=${process.env.REACT_APP_API_KEY}&units=metric`
 			);
 
 			setDublin(data);
@@ -45,7 +43,7 @@ const Home = (props) => {
 	const fetchBoston = async () => {
 		try {
 			const { data } = await axios.get(
-				`https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=${REACT_APP_API_KEY}&units=metric`
+				`https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=${process.env.REACT_APP_API_KEY}&units=metric`
 			);
 
 			setBoston(data);
@@ -56,7 +54,7 @@ const Home = (props) => {
 	const fetchBarcelona = async () => {
 		try {
 			const { data } = await axios.get(
-				`https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=${REACT_APP_API_KEY}&units=metric`
+				`https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=${process.env.REACT_APP_API_KEY}&units=metric`
 			);
 
 			setBarcelona(data);
@@ -65,7 +63,6 @@ const Home = (props) => {
 		}
 	};
 
-	console.log(setDublin);
 	return (
 		<div className="mainbody">
 			<h1>Choose a city</h1>
