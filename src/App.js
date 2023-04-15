@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import Home from "./pages/home.js";
 import Result from "./pages/result.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   const [loading, setLoading] = useState(false); //1
@@ -13,17 +15,15 @@ function App() {
   const [error, setError] = useState(""); //4
   const [forecast, setForecast] = useState("");
   const navigate = useNavigate();
-
+  
   const REACT_APP_API_KEY = "b3e43794b735ae0eeda537605a79cc74";
-
   const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${REACT_APP_API_KEY}&units=metric`;
-
+  
   // async function pause(ms) {
-  //   return new Promise((resolve) => setTimeout(resolve, ms));
-  // }
-
+    //   return new Promise((resolve) => setTimeout(resolve, ms));
+    // }
+    
   const handleChange = (e) => {
-    // handle key presses
     setLocation(e.target.value);
   };
 
@@ -70,28 +70,31 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              handleChange={handleChange}
-              handleSubmit={handleSubmit}
-              location={location}
-            />
-          }
-        />
-        <Route
-          path="/result"
-          element={
-            <Result
-              setLocation={setLocation}
-              setWeather={setWeather}
-              weather={weather}
-            />
-          }
-        />
-      </Routes>
+      <div className="mainbody">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                location={location}
+              />
+            }
+          />
+          <Route
+            path="/result"
+            element={
+              <Result
+                setLocation={setLocation}
+                setWeather={setWeather}
+                weather={weather}
+              />
+            }
+          />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }
