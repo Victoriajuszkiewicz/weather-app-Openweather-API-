@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import {
+	solid,
+	regular,
+	brands,
+} from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Home = (props) => {
 	const { handleChange, handleClick, handleSubmit, location } = props;
@@ -67,6 +74,14 @@ const Home = (props) => {
 		<div className="mainbody">
 			<h1>Choose a city</h1>
 			<h2>Select a city or a country to see the weather</h2>
+
+			<FontAwesomeIcon icon={solid("cloud")} />
+			<FontAwesomeIcon icon={solid("umbrella")} />
+			<FontAwesomeIcon icon={solid("sun")} />
+			<FontAwesomeIcon icon={solid("wind")} />
+			<FontAwesomeIcon icon={solid("cloud-rain")} />
+			<FontAwesomeIcon icon={solid("cloud-showers-heavy")} />
+			<FontAwesomeIcon icon={solid("cloud-sun")} />
 			<form className="NewForm" onSubmit={handleSubmit}>
 				<div className="container" id="searchbar">
 					<div className="input-group">

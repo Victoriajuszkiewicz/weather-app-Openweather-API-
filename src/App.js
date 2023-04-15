@@ -3,6 +3,13 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import {
+	solid,
+	regular,
+	brands,
+} from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import Home from "./pages/home.js";
 import Result from "./pages/result.js";
@@ -15,7 +22,6 @@ function App() {
 	const [error, setError] = useState(""); //4
 	const [forecast, setForecast] = useState("");
 	const navigate = useNavigate();
-
 
 	const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
 
@@ -67,7 +73,40 @@ function App() {
 		}
 		// setLoading(false);
 	};
-
+	const icon = [
+		"cloud-sun",
+		"cloud",
+		"umbrella",
+		"sun",
+		"wind",
+		"cloud-rain",
+		"cloud-showers-heavy",
+	];
+	const getIcon = (weather) => {
+		switch (weather) {
+			case "Partly cloudy" ||
+				"Few clouds" ||
+				"Overcast clouds" ||
+				"Broken clouds":
+				return icon[0];
+				break;
+			case "Sunny" || "Clear sky":
+				return icon[3];
+				break;
+			case "Light rain":
+				return icon[2];
+				break;
+			case "Heavy rain":
+				return icon[6];
+				break;
+			case "Moderate or heavy rain":
+				return icon[5];
+				break;
+			default:
+				return icon[0];
+		}
+	};
+	console.log(weather);
 	return (
 		<div className="App">
 			<div className="mainbody">
@@ -89,6 +128,7 @@ function App() {
 								setLocation={setLocation}
 								setWeather={setWeather}
 								weather={weather}
+								getIcon={getIcon}
 							/>
 						}
 					/>
