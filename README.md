@@ -1,6 +1,6 @@
 # Weather-app (OpenWeather API)
 
-Weather app is a simple Front end apllication,
+Weather App is a simple front-end application that allows users to check the current weather conditions for a particular location. It provides real-time weather information, including temperature, humidity, wind speed, and weather description, based on the user's input location.
 
 ## About the API
 
@@ -25,4 +25,10 @@ Run `npm install`
 
 Create .env file with API KEY to be able to use API.
 
-##
+## Features
+
+Current Weather: Users can enter a location in the search bar to instantly retrieve the current weather conditions, including temperature in Celsius, humidity percentage, wind speed in kilometers per hour, and weather description (e.g., sunny, cloudy, rainy, etc.).
+
+Search Functionality: The app provides a search functionality that allows users to enter any location, such as a city, town, or zip code, and retrieve the current weather information for that location.
+
+Responsive Design: The Weather App is designed to be responsive and mobile-friendly, ensuring a seamless user experience across various devices, including desktops, tablets, and mobile phones.
