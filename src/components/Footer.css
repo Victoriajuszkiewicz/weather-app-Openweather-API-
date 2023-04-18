@@ -1,13 +1,13 @@
 .footerparent {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 .footer {
-  background-color: #7997ee;
-  position: sticky;
-  top: 100%;
-  margin-top: auto;
+	background-color: #7997ee;
+	position: sticky;
+	top: 100%;
+	margin-top: auto;
 }
 
 .bi {
-  color: white;
+	color: white;
 }

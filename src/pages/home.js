@@ -116,14 +116,14 @@ const Home = (props) => {
 							<div className="card-body">
 								{Berlin && (
 									<div className="row">
-										<div className="col-sm-6">
+										<div className="col-6 col-sm-6">
 											<h3 className="card-title">{Berlin.name}</h3>
 											<p className="card-text" id="temperature">
 												{Math.round(Berlin.main?.temp)}°C
 											</p>
 										</div>
 
-										<div className="col-sm-6">
+										<div className="col-6 col-sm-6">
 											<p className="card-text">
 												Feels like {Math.round(Berlin.main?.feels_like)}°C
 											</p>
@@ -149,13 +149,13 @@ const Home = (props) => {
 							<div className="card-body">
 								{Dublin && (
 									<div className="row">
-										<div className="col-sm-6">
+										<div className="col-6 col-sm-6">
 											<h3 className="card-title">{Dublin.name}</h3>
 											<p className="card-text" id="temperature">
 												{Math.round(Dublin.main?.temp)}°C
 											</p>
 										</div>
-										<div className="col-sm-6">
+										<div className="col-6 col-sm-6">
 											<p className="card-text">
 												Feels like {Math.round(Dublin.main?.feels_like)}°C
 											</p>
@@ -181,13 +181,13 @@ const Home = (props) => {
 							<div className="card-body">
 								{Barcelona && (
 									<div className="row">
-										<div className="col-sm-6">
+										<div className="col-6 col-sm-6">
 											<h3 className="card-title">{Barcelona.name}</h3>
 											<p className="card-text" id="temperature">
 												{Math.round(Barcelona.main?.temp)}°C
 											</p>
 										</div>
-										<div className="col-sm-6">
+										<div className="col-6 col-sm-6">
 											<p className="card-text">
 												Feels like {Math.round(Barcelona.main?.feels_like)}°C
 											</p>
@@ -213,13 +213,13 @@ const Home = (props) => {
 							<div className="card-body">
 								{Boston && (
 									<div className="row">
-										<div className="col-sm-6">
+										<div className="col-6 col-sm-6">
 											<h3 className="card-title">{Boston.name}</h3>
 											<p className="card-text" id="temperature">
 												{Math.round(Boston.main?.temp)}°C
 											</p>
 										</div>
-										<div className="col-sm-6">
+										<div className="col-6 col-sm-6">
 											<p className="card-text">
 												Feels like {Math.round(Boston.main?.feels_like)}°C
 											</p>
