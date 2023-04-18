@@ -25,6 +25,8 @@ function App() {
 
 	const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
 
+
+
 	// async function pause(ms) {
 	//   return new Promise((resolve) => setTimeout(resolve, ms));
 	// }

@@ -70,41 +70,40 @@ const Home = (props) => {
 		}
 	};
 
+	let ICON_URL = "https://openweathermap.org/img/wn/";
+
 	return (
 		<div className="mainbody">
 			<h1>Choose a city</h1>
 			<h2>Select a city or a country to see the weather</h2>
-
-			<FontAwesomeIcon icon={solid("cloud")} />
-			<FontAwesomeIcon icon={solid("umbrella")} />
-			<FontAwesomeIcon icon={solid("sun")} />
-			<FontAwesomeIcon icon={solid("wind")} />
-			<FontAwesomeIcon icon={solid("cloud-rain")} />
-			<FontAwesomeIcon icon={solid("cloud-showers-heavy")} />
-			<FontAwesomeIcon icon={solid("cloud-sun")} />
 			<form className="NewForm" onSubmit={handleSubmit}>
-				<div className="container" id="searchbar">
-					<div className="input-group">
-						<input
-							className="form-control"
-							type="text"
-							placeholder="Search for the city..."
-							value={location}
-							onChange={handleChange}
-						></input>
+				<div className="container " id="searchbar">
+					<div className="row justify-content-center">
+						<div className="input-group mb-3">
+							<div className="col">
+								<input
+									className="form-control"
+									type="text"
+									placeholder="Search for the city..."
+									value={location}
+									onChange={handleChange}
+								></input>
+							</div>
 
-						<div className="input-group-append">
-							<button type="button" className="btn btn-outline-secondary">
-								Search
-							</button>
-
-							{/* <button
+							<div className="input-group-append">
+								<div className="col">
+									<button className="btn btn-outline-secondary" type="button">
+										Get weather
+									</button>
+								</div>
+								{/* <button
                 onClick={handleClick}
                 type="button"
                 className="btn btn-outline-secondary"
               >
                 5-day weather
               </button> */}
+							</div>
 						</div>
 					</div>
 				</div>
@@ -121,6 +120,12 @@ const Home = (props) => {
 											<p className="card-text" id="temperature">
 												{Math.round(Berlin.main?.temp)}°C
 											</p>
+
+											{Berlin.weather && Berlin.weather[0] && (
+												<img src={ICON_URL + Berlin.weather[0].icon + ".png"} />
+											)}
+
+											{/* <img src={Berlin?.weather.icon} /> */}
 										</div>
 
 										<div className="col-6 col-sm-6">
@@ -154,6 +159,9 @@ const Home = (props) => {
 											<p className="card-text" id="temperature">
 												{Math.round(Dublin.main?.temp)}°C
 											</p>
+											{Dublin.weather && Dublin.weather[0] && (
+												<img src={ICON_URL + Dublin.weather[0].icon + ".png"} />
+											)}
 										</div>
 										<div className="col-6 col-sm-6">
 											<p className="card-text">
@@ -162,6 +170,7 @@ const Home = (props) => {
 											<p className="card-text">
 												Humidity {Dublin.main?.humidity}%
 											</p>
+
 											<p>
 												{Dublin.weather &&
 													Dublin.weather[0] &&
@@ -186,6 +195,11 @@ const Home = (props) => {
 											<p className="card-text" id="temperature">
 												{Math.round(Barcelona.main?.temp)}°C
 											</p>
+											{Barcelona.weather && Barcelona.weather[0] && (
+												<img
+													src={ICON_URL + Barcelona.weather[0].icon + ".png"}
+												/>
+											)}
 										</div>
 										<div className="col-6 col-sm-6">
 											<p className="card-text">
@@ -194,6 +208,7 @@ const Home = (props) => {
 											<p className="card-text">
 												Humidity {Barcelona.main?.humidity}%
 											</p>
+
 											<p>
 												{Barcelona.weather &&
 													Barcelona.weather[0] &&
@@ -218,6 +233,9 @@ const Home = (props) => {
 											<p className="card-text" id="temperature">
 												{Math.round(Boston.main?.temp)}°C
 											</p>
+											{Boston.weather && Boston.weather[0] && (
+												<img src={ICON_URL + Boston.weather[0].icon + ".png"} />
+											)}
 										</div>
 										<div className="col-6 col-sm-6">
 											<p className="card-text">
@@ -226,6 +244,7 @@ const Home = (props) => {
 											<p className="card-text">
 												Humidity {Boston.main?.humidity}%
 											</p>
+
 											<p>
 												{Boston.weather &&
 													Boston.weather[0] &&
