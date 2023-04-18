@@ -1,0 +1,26 @@
+#resultcontainer {
+	height: 600px;
+	padding: 10px;
+}
+/* .wrapper {
+	display: grid; 
+	grid-template-columns: repeat(4, 200px);
+	grid-auto-rows: 50px;
+	grid-gap: 10px;
+	width: 516px;
+}  */
+#locationincon {
+	padding: 5px;
+	font-size: 40px;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+#highlights {
+	background-color: #1d3557;
+	margin: 2px;
+}
+#tempfont {
+	font-size: 30px;
+	font-weight: bolder;
+}

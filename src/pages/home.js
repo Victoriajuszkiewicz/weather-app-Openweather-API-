@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
-import {
-	solid,
-	regular,
-	brands,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+
 
 const Home = (props) => {
 	const { handleChange, handleClick, handleSubmit, location } = props;
@@ -74,8 +68,10 @@ const Home = (props) => {
 
 	return (
 		<div className="mainbody">
-			<h1>Choose a city</h1>
-			<h2>Select a city or a country to see the weather</h2>
+			<div className="container" id="hometext">
+				<h1>Choose a city</h1>
+				<h2 id="selectacity">Select a city or a country to see the weather</h2>
+			</div>
 			<form className="NewForm" onSubmit={handleSubmit}>
 				<div className="container " id="searchbar">
 					<div className="row justify-content-center">
