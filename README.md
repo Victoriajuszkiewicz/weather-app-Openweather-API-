@@ -32,3 +32,19 @@ Current Weather: Users can enter a location in the search bar to instantly retri
 Search Functionality: The app provides a search functionality that allows users to enter any location, such as a city, town, or zip code, and retrieve the current weather information for that location.
 
 Responsive Design: The Weather App is designed to be responsive and mobile-friendly, ensuring a seamless user experience across various devices, including desktops, tablets, and mobile phones.
+
+## Technologies
+
+- VS Code </br>
+- HTML5
+- ES6 JavaScript </br>
+- React </br>
+- Git/Github
+- React js
+- Bootstrap
+
+## Website overview
+
+![homepage.weatherapp](./public/app1.png)
+![homepage.weatherapp](./public/app2.png)
+![homepage.weatherapp](./public/app3.png)
