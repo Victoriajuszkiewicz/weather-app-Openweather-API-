@@ -57,14 +57,6 @@ export default function result(props) {
 			</div>
 			<div>
 				<h3>5-day forecast</h3>
-				{/* {forecast &&
-					forecast.map((data, index) => (
-						<div key={index}>
-							<p>{new Date(data.dt_txt).toLocaleString}</p>
-							<p>{data.weather[0].description}</p>
-							<p>{Math.round(data.main.temp)}°C</p>
-						</div>
-					))} */}
 				{forecast &&
 					forecast.map((data, index) => {
 						const dateObj = new Date(data.dt_txt);

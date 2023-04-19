@@ -18,13 +18,7 @@ function App() {
 
 	const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
 
-	// const FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
-
 	const FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${process.env.REACT_APP_API_KEY}&units=metric&cnt=5`;
-
-	// async function pause(ms) {
-	//   return new Promise((resolve) => setTimeout(resolve, ms));
-	// }
 
 	const handleChange = (e) => {
 		setLocation(e.target.value);
@@ -70,39 +64,11 @@ function App() {
 		}
 		// setLoading(false);
 	};
-	// const getForecast = async (formLocation) => {
-	// 	//console.log(formLocation);
-	// 	// setLoading(true);
-	// 	setForecast(null);
-	// 	setError("");
-
-	// 	// await pause(500);
-	// 	// call Open Weather API
-	// 	try {
-	// 		//this line connects to one with url
-	// 		let response = await fetch(FORECAST_URL);
-	// 		//if server found then
-	// 		if (response.ok) {
-	// 			// Response was OK; wait for the JSON data and convert it
-	// 			let forecastData = await response.json();
-	// 			// Save it to state
-	// 			setForecast(forecastData);
-	// 		} else {
-	// 			// Server responded, but can't fulfill my request
-	// 			setError(`Server error: ${response.status} ${response.statusText}`);
-	// 		}
-	// 	} catch (err) {
-	// 		// Network error: server wasn't reached
-	// 		setError(`Network error: ${err.message}`);
-	// 	}
-	// 	// setLoading(false);
-	// };
-
 	const getForecast = async (formLocation) => {
 		setForecast(null);
 		setError("");
 
-		const API_KEY = "b3e43794b735ae0eeda537605a79cc74";
+		const API_KEY = process.env.REACT_APP_API_KEY;
 		const city = formLocation;
 		const targetTime = "12:00:00";
 		const params = `?q=${city}&cnt=40&appid=${API_KEY}&units=metric`;
