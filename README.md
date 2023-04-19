@@ -33,6 +33,8 @@ Search Functionality: The app provides a search functionality that allows users 
 
 Responsive Design: The Weather App is designed to be responsive and mobile-friendly, ensuring a seamless user experience across various devices, including desktops, tablets, and mobile phones.
 
+5-day Forecast: This is another call to api to fetch 5 day forecast for form input location.
+
 ## Technologies
 
 - VS Code </br>
