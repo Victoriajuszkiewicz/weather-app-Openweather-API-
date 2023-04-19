@@ -1,6 +1,7 @@
 #resultcontainer {
-	height: 600px;
+	/* height: 600px; */
 	padding: 10px;
+	width: 300px;
 }
 /* .wrapper {
 	display: grid; 

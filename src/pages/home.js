@@ -92,6 +92,7 @@ const Home = (props) => {
 										Get weather
 									</button>
 								</div>
+								
 								{/* <button
                 onClick={handleClick}
                 type="button"

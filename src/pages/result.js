@@ -1,15 +1,12 @@
 import React from "react";
 import "./result.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function result(props) {
-	const { setLocation, setWeather, weather } = props;
+	const { setLocation, setWeather, weather, forecast } = props;
 	const { getIcon } = props;
+
 	let ICON_URL = "https://openweathermap.org/img/wn/";
 
-	console.log(weather);
-	// const weatherIcon = getIcon(weather?.weather[0]?.description);
-	const weatherIcon = getIcon(weather?.weather[0]?.description);
 	return (
 		<div>
 			<div className="container" id="resultcontainer">
@@ -22,11 +19,6 @@ export default function result(props) {
 							</h3>
 						</div>
 						<p id="temperature">{Math.round(weather.main.temp)}°C</p>
-
-						{/* <img
-							className="icon"
-							src={getIcon(weather.weather[0].description)}
-						></img> */}
 						{weather.weather && weather.weather[0] && (
 							<img
 								src={ICON_URL + weather.weather[0].icon + ".png"}
@@ -62,6 +54,34 @@ export default function result(props) {
 						</div>
 					</div>
 				)}
+			</div>
+			<div>
+				<h3>5-day forecast</h3>
+				{/* {forecast &&
+					forecast.map((data, index) => (
+						<div key={index}>
+							<p>{new Date(data.dt_txt).toLocaleString}</p>
+							<p>{data.weather[0].description}</p>
+							<p>{Math.round(data.main.temp)}°C</p>
+						</div>
+					))} */}
+				{forecast &&
+					forecast.map((data, index) => {
+						const dateObj = new Date(data.dt_txt);
+						const options = {
+							weekday: "long",
+							month: "long",
+							day: "numeric",
+						};
+						const formattedDate = dateObj.toLocaleDateString("en-US", options);
+						return (
+							<div key={index}>
+								<p>{formattedDate}</p>
+								<p>{data.weather[0].description}</p>
+								<p>{Math.round(data.main.temp)}°C</p>
+							</div>
+						);
+					})}
 			</div>
 		</div>
 	);
