@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./home.css";
 import axios from "axios";
 
-
 const Home = (props) => {
 	const { handleChange, handleClick, handleSubmit, location } = props;
 	const [Berlin, setBerlin] = useState({});
@@ -88,18 +87,10 @@ const Home = (props) => {
 
 							<div className="input-group-append">
 								<div className="col">
-									<button className="btn btn-outline-secondary" type="button">
+									<button className="btn btn-primary" type="button">
 										Get weather
 									</button>
 								</div>
-								
-								{/* <button
-                onClick={handleClick}
-                type="button"
-                className="btn btn-outline-secondary"
-              >
-                5-day weather
-              </button> */}
 							</div>
 						</div>
 					</div>

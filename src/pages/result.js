@@ -55,25 +55,42 @@ export default function result(props) {
 					</div>
 				)}
 			</div>
-			<div>
-				<h3>5-day forecast</h3>
-				{forecast &&
-					forecast.map((data, index) => {
-						const dateObj = new Date(data.dt_txt);
-						const options = {
-							weekday: "long",
-							month: "long",
-							day: "numeric",
-						};
-						const formattedDate = dateObj.toLocaleDateString("en-US", options);
-						return (
-							<div key={index}>
-								<p>{formattedDate}</p>
-								<p>{data.weather[0].description}</p>
-								<p>{Math.round(data.main.temp)}°C</p>
-							</div>
-						);
-					})}
+			<div className="container" id="forecastcontainer">
+				<div className="row">
+					<div className="col-12">
+						<h3 id="forecasttext">5-day forecast</h3>
+					</div>
+
+					{forecast &&
+						forecast.map((data, index) => {
+							const dateObj = new Date(data.dt_txt);
+							const options = {
+								weekday: "long",
+								month: "long",
+								day: "numeric",
+							};
+							const formattedDate = dateObj.toLocaleDateString(
+								"en-US",
+								options
+							);
+							return (
+								<div className="col-12">
+									<div className="row" id="allforecastcards" key={index}>
+										<div className="col-4">
+											<p id="tempforecast">{formattedDate}</p>
+										</div>
+										<div className="col-4">
+											<img src={ICON_URL + data.weather[0].icon + ".png"} />
+											<p>{data.weather[0].description}</p>
+										</div>
+										<div className="col-4" id="tempforecast">
+											<p>{Math.round(data.main.temp)}°C</p>
+										</div>
+									</div>
+								</div>
+							);
+						})}
+				</div>
 			</div>
 		</div>
 	);

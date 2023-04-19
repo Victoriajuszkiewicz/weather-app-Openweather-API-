@@ -25,3 +25,19 @@
 	font-size: 30px;
 	font-weight: bolder;
 }
+#forecastcontainer {
+	padding-bottom: 70px;
+	width: 500px;
+	max-width: 320px;
+}
+#forecasttext {
+	padding: 5px;
+}
+#tempforecast {
+	font-size: 20px;
+}
+#allforecastcards {
+	border: solid white;
+	border-radius: 12px;
+	margin-top: 10px;
+}
