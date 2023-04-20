@@ -12,7 +12,7 @@ export default function result(props) {
 			<div className="container" id="resultcontainer">
 				{weather && (
 					<div>
-						<div>
+						<div id="containerforname">
 							<h3>
 								<i className="bi bi-geo-alt-fill" id="locationincon"></i>
 								{weather.name}

@@ -30,6 +30,9 @@
 	width: 500px;
 	max-width: 320px;
 }
+#containerforname {
+	padding-top: 30px;
+}
 #forecasttext {
 	padding: 5px;
 }
