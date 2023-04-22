@@ -33,7 +33,7 @@ Search Functionality: The app provides a search functionality that allows users 
 
 Responsive Design: The Weather App is designed to be responsive and mobile-friendly, ensuring a seamless user experience across various devices, including desktops, tablets, and mobile phones.
 
-5-day Forecast: This is another call to api to fetch 5 day forecast for form input location.
+5-day Forecast: Allows you to get the 5-day forecast for a location of your choice. To use the app, simply enter a location in the input form, and click the "Get weather" button. The app will make a call to a weather API to fetch the forecast data, and display it on result page under current weather.
 
 ## Technologies
 
