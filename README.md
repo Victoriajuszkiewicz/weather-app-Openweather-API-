@@ -2,7 +2,7 @@
 
 Weather App is a simple front-end application that allows users to check the current weather conditions for a particular location. It provides real-time weather information, including temperature, humidity, wind speed, and weather description, based on the user's input location.
 
-## Click the link to see play with the app
+## Click the link to play with the app
 
 https://main--weather-app-victoria.netlify.app/
 
