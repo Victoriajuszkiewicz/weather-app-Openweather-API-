@@ -5,7 +5,7 @@ import "./Footer.css";
 
 const Footer = () => {
 	return (
-		<div classname="footerparent">
+		<div className="footerparent">
 			<div className="fixed-bottom">
 				<footer className="footer mt-auto py-3  sticky-bottom">
 					<div className="container">

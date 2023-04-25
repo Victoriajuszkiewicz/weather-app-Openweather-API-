@@ -2,10 +2,11 @@ import React from "react";
 import "./result.css";
 
 export default function result(props) {
-	const { setLocation, setWeather, weather, forecast } = props;
-	const { getIcon } = props;
+	const { weather, forecast } = props;
+	// const { getIcon } = props;
 
 	let ICON_URL = "https://openweathermap.org/img/wn/";
+	// console.log(weather);
 
 	return (
 		<div>
@@ -21,6 +22,7 @@ export default function result(props) {
 						<p id="temperature">{Math.round(weather.main.temp)}°C</p>
 						{weather.weather && weather.weather[0] && (
 							<img
+								alt="weather icon from openweatherapi"
 								src={ICON_URL + weather.weather[0].icon + ".png"}
 								className="iconimage"
 							/>
@@ -62,6 +64,7 @@ export default function result(props) {
 					</div>
 
 					{forecast &&
+						forecast.length > 0 &&
 						forecast.map((data, index) => {
 							const dateObj = new Date(data.dt_txt);
 							const options = {
@@ -80,7 +83,10 @@ export default function result(props) {
 											<p id="tempforecast">{formattedDate}</p>
 										</div>
 										<div className="col-4">
-											<img src={ICON_URL + data.weather[0].icon + ".png"} />
+											<img
+												alt="weather icon from openweather"
+												src={ICON_URL + data.weather[0].icon + ".png"}
+											/>
 											<p>{data.weather[0].description}</p>
 										</div>
 										<div className="col-4" id="tempforecast">

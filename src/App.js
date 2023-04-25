@@ -102,8 +102,6 @@ function App() {
 		}
 	};
 
-	console.log(weather);
-	console.log(forecast);
 	return (
 		<div className="App">
 			<div className="mainbody">
