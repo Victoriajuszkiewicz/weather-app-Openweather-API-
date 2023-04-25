@@ -110,7 +110,10 @@ const Home = (props) => {
 											</p>
 
 											{Berlin.weather && Berlin.weather[0] && (
-												<img src={ICON_URL + Berlin.weather[0].icon + ".png"} />
+												<img
+													alt="this is an icon"
+													src={ICON_URL + Berlin.weather[0].icon + ".png"}
+												/>
 											)}
 
 											{/* <img src={Berlin?.weather.icon} /> */}
@@ -148,7 +151,10 @@ const Home = (props) => {
 												{Math.round(Dublin.main?.temp)}°C
 											</p>
 											{Dublin.weather && Dublin.weather[0] && (
-												<img src={ICON_URL + Dublin.weather[0].icon + ".png"} />
+												<img
+													alt="this is a weather icon"
+													src={ICON_URL + Dublin.weather[0].icon + ".png"}
+												/>
 											)}
 										</div>
 										<div className="col-6 col-sm-6">
@@ -185,6 +191,7 @@ const Home = (props) => {
 											</p>
 											{Barcelona.weather && Barcelona.weather[0] && (
 												<img
+													alt="this is a weather icon"
 													src={ICON_URL + Barcelona.weather[0].icon + ".png"}
 												/>
 											)}
@@ -222,7 +229,10 @@ const Home = (props) => {
 												{Math.round(Boston.main?.temp)}°C
 											</p>
 											{Boston.weather && Boston.weather[0] && (
-												<img src={ICON_URL + Boston.weather[0].icon + ".png"} />
+												<img
+													alt="this is a weather icon"
+													src={ICON_URL + Boston.weather[0].icon + ".png"}
+												/>
 											)}
 										</div>
 										<div className="col-6 col-sm-6">
