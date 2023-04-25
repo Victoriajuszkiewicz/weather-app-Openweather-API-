@@ -3,7 +3,7 @@ import "./home.css";
 import axios from "axios";
 
 const Home = (props) => {
-	const { handleChange, handleClick, handleSubmit, location } = props;
+	const { handleChange, handleSubmit, location } = props;
 	const [Berlin, setBerlin] = useState({});
 	const [Dublin, setDublin] = useState({});
 	const [Boston, setBoston] = useState({});
